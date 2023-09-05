@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct GuacChainApp: App {
+    @StateObject var currencyVM = CurrencyViewModel()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(currencyVM)
         }
     }
 }
